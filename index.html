@@ -6,15 +6,23 @@
   <title>AuraML | AI Engineering Dashboard</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Ambient background glows -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
   <div class="ai-dash-page">
-    <div class="ai-dash-container">
+    <div class="ai-dash-container glass-panel fade-in-up">
       <!-- Navbar -->
       <nav class="ai-dash-nav">
-        <div class="ai-dash-logo">AuraML</div>
+        <div class="ai-dash-logo">
+          <div class="logo-orb"></div>
+          AuraML
+        </div>
         <div class="ai-dash-links">
           <a href="#" class="ai-dash-link active">Dashboard</a>
           <a href="#" class="ai-dash-link">Datasets</a>
@@ -25,132 +33,152 @@
           <a href="#" class="ai-dash-link">Settings</a>
         </div>
         <div class="ai-dash-actions">
-          <button class="ai-dash-icon-btn">⚙️</button>
-          <button class="ai-dash-icon-btn">🔔</button>
-          <div class="ai-dash-avatar">
+          <button class="ai-dash-icon-btn hover-pop">⚙️</button>
+          <button class="ai-dash-icon-btn hover-pop">
+            🔔<div class="notification-dot"></div>
+          </button>
+          <div class="ai-dash-avatar hover-pop">
             <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" alt="Sarah Connor">
+            <div class="status-ring"></div>
           </div>
         </div>
       </nav>
 
       <!-- Header -->
-      <header class="ai-dash-header">
-        <h1>Welcome back, Sarah</h1>
+      <header class="ai-dash-header stagger-1">
+        <h1>Welcome back, <span>Sarah</span></h1>
+        <p class="subtitle">System operations are nominal. 4 tasks pending review.</p>
       </header>
 
       <!-- Main Grid -->
       <div class="ai-dash-grid">
         <!-- Left Column -->
-        <div class="ai-col">
-          <div class="ai-profile-card">
+        <div class="ai-col stagger-2">
+          <div class="ai-profile-card interactive-card">
             <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&q=80" alt="Profile" class="ai-profile-img">
+            <div class="ai-profile-overlay"></div>
             <div class="ai-profile-info">
               <div class="ai-profile-text">
                 <h3>Sarah Connor</h3>
                 <p>Lead AI Engineer</p>
               </div>
-              <div class="ai-profile-badge">$2,500 Budget</div>
+              <div class="ai-profile-badge pulse-glow">$2,500 Budget</div>
             </div>
           </div>
 
-          <div class="ai-info-list">
-            <div class="ai-info-item"><span>API Keys</span><span>▼</span></div>
-            <div class="ai-info-item"><span>Active Clusters</span><span>▲</span></div>
-            <div style="padding: 0 10px 20px; border-bottom: 1px solid #F0F0F0;">
+          <div class="ai-info-list glass-widget">
+            <div class="ai-info-item"><span>API Keys</span><span class="chevron">✓</span></div>
+            <div class="ai-info-item active-list-item"><span>Active Clusters</span><span class="chevron rotate">✓</span></div>
+            <div class="expanded-info">
               <div class="ai-info-device">
                 <img src="https://images.unsplash.com/photo-1593642702821-c823b13eb412?auto=format&fit=crop&w=100&q=80" alt="Cluster">
                 <div>
-                  <span>NVIDIA DGX A100</span>
-                  <span class="desc">Region: us-east-1</span>
+                  <span class="device-name">NVIDIA DGX A100</span>
+                  <span class="desc">Region: us-east-1 <span class="status-online"></span></span>
                 </div>
-                <span style="margin-left: auto; color: #888;">⋮</span>
+                <button class="icon-btn-small">⋮</button>
               </div>
             </div>
-            <div class="ai-info-item"><span>Usage Summary</span><span>▼</span></div>
-            <div class="ai-info-item"><span>Security Policies</span><span>▼</span></div>
+            <div class="ai-info-item"><span>Usage Summary</span><span class="chevron">✓</span></div>
+            <div class="ai-info-item" style="border-bottom:none;"><span>Security Policies</span><span class="chevron">✓</span></div>
           </div>
         </div>
 
         <!-- Middle Column -->
-        <div class="ai-col">
+        <div class="ai-col stagger-3">
           <div class="ai-top-stats">
-            <div class="ai-pill">
+            <div class="ai-pill glass-widget interactive-card">
               <div class="ai-pill-content">
                 <span class="ai-pill-label">Data Cleaned</span>
-                <div class="ai-pill-bar-bg">85%</div>
+                <div class="ai-pill-bar-wrap">
+                  <div class="ai-pill-bar-bg grad-1" style="width: 85%;">85%</div>
+                </div>
               </div>
             </div>
-            <div class="ai-pill">
+            <div class="ai-pill glass-widget interactive-card">
               <div class="ai-pill-content">
                 <span class="ai-pill-label">Epochs</span>
-                <div class="ai-pill-bar-bg light">60%</div>
+                <div class="ai-pill-bar-wrap">
+                  <div class="ai-pill-bar-bg grad-2" style="width: 60%;">60%</div>
+                </div>
               </div>
             </div>
-            <div class="ai-pill">
+            <div class="ai-pill glass-widget interactive-card">
               <div class="ai-pill-content">
                 <span class="ai-pill-label">Train Limit</span>
-                <div class="ai-pill-bar-bg lighter">45%</div>
+                <div class="ai-pill-bar-wrap">
+                  <div class="ai-pill-bar-bg grad-3" style="width: 45%;">45%</div>
+                </div>
               </div>
             </div>
-            <div class="ai-pill outlined">
+            <div class="ai-pill glass-widget interactive-card outlined-pill">
               <div class="ai-pill-content">
                 <span class="ai-pill-label">Validation</span>
-                <div class="ai-pill-bar-bg">95%</div>
+                <div class="ai-pill-bar-wrap">
+                  <div class="ai-pill-bar-bg trans-bg" style="width: 95%;">95%</div>
+                </div>
               </div>
             </div>
           </div>
 
           <div class="ai-widgets-row">
-            <div class="ai-widget">
+            <div class="ai-widget glass-widget interactive-card">
               <div class="ai-widget-header">
-                <h3 class="ai-widget-title">Compute Progress</h3>
-                <button class="ai-widget-btn">↗</button>
+                <div>
+                  <h3 class="ai-widget-title">Compute Progress</h3>
+                  <span class="text-secondary">Weekly Overview</span>
+                </div>
+                <button class="ai-widget-btn hover-pop">↗</button>
               </div>
-              <div class="ai-widget-val">
-                128.4 <span class="ai-widget-unit">GPU h<span>this week</span></span>
+              <div class="ai-widget-val glow-text">
+                128.4 <span class="ai-widget-unit">GPU h</span>
               </div>
               <div class="ai-bar-chart">
-                <div class="ai-bar-col"><div class="ai-bar"><div class="ai-bar-fill" style="height: 30%;"></div></div><span class="ai-bar-day">S</span></div>
-                <div class="ai-bar-col"><div class="ai-bar"><div class="ai-bar-fill" style="height: 80%;"></div></div><span class="ai-bar-day">M</span></div>
+                <div class="ai-bar-col"><div class="ai-bar"><div class="ai-bar-fill fade-up" style="height: 30%; animation-delay: 0.1s;"></div></div><span class="ai-bar-day">S</span></div>
+                <div class="ai-bar-col"><div class="ai-bar"><div class="ai-bar-fill fade-up" style="height: 80%; animation-delay: 0.2s;"></div></div><span class="ai-bar-day">M</span></div>
                 <div class="ai-bar-col">
                   <div class="ai-bar">
-                    <div class="ai-bar-fill active" style="height: 100%;"></div>
-                    <div style="background: #3366CC; color: white; padding: 2px 6px; border-radius: 10px; font-size: 10px; position: absolute; top: -25px;">42.1h</div>
+                    <div class="ai-bar-fill active fade-up" style="height: 100%; animation-delay: 0.3s; box-shadow: 0 0 15px #00F0FF;"></div>
+                    <div class="tooltip fade-in-delay">42.1h</div>
                   </div>
-                  <span class="ai-bar-day">T</span>
+                  <span class="ai-bar-day text-highlight">T</span>
                 </div>
-                <div class="ai-bar-col"><div class="ai-bar"><div class="ai-bar-fill" style="height: 60%;"></div></div><span class="ai-bar-day">W</span></div>
-                <div class="ai-bar-col"><div class="ai-bar"><div class="ai-bar-fill" style="height: 20%;"></div></div><span class="ai-bar-day">T</span></div>
-                <div class="ai-bar-col"><div class="ai-bar"><div class="ai-bar-fill" style="height: 80%;"></div></div><span class="ai-bar-day">F</span></div>
-                <div class="ai-bar-col"><div class="ai-bar"><div class="ai-bar-fill" style="height: 10%;"></div></div><span class="ai-bar-day">S</span></div>
+                <div class="ai-bar-col"><div class="ai-bar"><div class="ai-bar-fill fade-up" style="height: 60%; animation-delay: 0.4s;"></div></div><span class="ai-bar-day">W</span></div>
+                <div class="ai-bar-col"><div class="ai-bar"><div class="ai-bar-fill fade-up" style="height: 20%; animation-delay: 0.5s;"></div></div><span class="ai-bar-day">T</span></div>
+                <div class="ai-bar-col"><div class="ai-bar"><div class="ai-bar-fill fade-up" style="height: 80%; animation-delay: 0.6s;"></div></div><span class="ai-bar-day">F</span></div>
+                <div class="ai-bar-col"><div class="ai-bar"><div class="ai-bar-fill fade-up" style="height: 10%; animation-delay: 0.7s;"></div></div><span class="ai-bar-day">S</span></div>
               </div>
             </div>
 
-            <div class="ai-widget">
-              <div class="ai-widget-header">
+            <div class="ai-widget glass-widget interactive-card d-flex-col">
+              <div class="ai-widget-header w-100">
                 <h3 class="ai-widget-title">Training ETA</h3>
-                <button class="ai-widget-btn">↗</button>
+                <button class="ai-widget-btn hover-pop">↗</button>
               </div>
-              <div class="ai-circle-chart">
-                <div class="ai-circle">
-                  <div class="ai-circle-inner">
-                    <div class="ai-circle-val">12:45</div>
+              <div class="ai-circle-chart flex-grow">
+                <div class="ai-circle pulse-ring">
+                  <div class="ai-circle-inner fade-in-delay">
+                    <div class="ai-circle-val glow-text">12:45</div>
                     <div class="ai-circle-lbl">Remaining</div>
                   </div>
+                  <svg class="circle-svg" width="140" height="140">
+                    <circle cx="70" cy="70" r="62" class="circle-bg"></circle>
+                    <circle cx="70" cy="70" r="62" class="circle-progress"></circle>
+                  </svg>
                 </div>
-                <div class="ai-circle-actions">
-                  <div class="ai-btn-small">▶</div>
-                  <div class="ai-btn-small">⏸</div>
-                  <div class="ai-btn-small" style="background: #111; color: white;">⏱</div>
+                <div class="ai-circle-actions fade-in-up" style="animation-delay: 1s;">
+                  <div class="ai-btn-small hover-pop">▶</div>
+                  <div class="ai-btn-small hover-pop">⏸</div>
+                  <div class="ai-btn-small active hover-pop">⏱</div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="ai-calendar-view">
+          <div class="ai-calendar-view glass-widget interactive-card">
             <div class="ai-cal-header">
               <span class="ai-cal-month">August</span>
-              <span class="ai-cal-month active">September 2024</span>
+              <span class="ai-cal-month active glow-text">September 2024</span>
               <span class="ai-cal-month">October</span>
             </div>
             <div class="ai-cal-grid">
@@ -162,25 +190,27 @@
                 <div class="ai-cal-day"><div class="ai-cal-day-name">Fri</div><div class="ai-cal-day-num">26</div></div>
                 <div class="ai-cal-day"><div class="ai-cal-day-name">Sat</div><div class="ai-cal-day-num">27</div></div>
               </div>
-              <div class="ai-cal-times" style="grid-column: 1;">
-                <span>8:00 am</span>
-                <span>9:00 am</span>
-                <span>10:00 am</span>
-                <span>11:00 am</span>
+              <div class="ai-cal-times">
+                <span>8:00</span>
+                <span>9:00</span>
+                <span>10:00</span>
+                <span>11:00</span>
               </div>
               <div class="ai-cal-events">
-                <div class="ai-event ai-event-1">
+                <div class="event-timeline-line"></div>
+                <div class="ai-event ai-event-1 hover-scale">
+                  <div class="event-glow"></div>
                   <h4>Data Sync</h4>
                   <p>S3 bucket transfer</p>
-                  <div class="ai-event-1-avatars">
+                  <div class="ai-event-avatars">
                     <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=50&q=80" alt="1">
                     <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=50&q=80" alt="2">
                   </div>
                 </div>
-                <div class="ai-event ai-event-2">
+                <div class="ai-event ai-event-2 hover-scale">
                   <h4>Model Finetuning</h4>
                   <p>Llama 3 8B Instruct</p>
-                  <div class="ai-event-2-avatars">
+                  <div class="ai-event-avatars">
                     <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=50&q=80" alt="3">
                     <img src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?auto=format&fit=crop&w=50&q=80" alt="4">
                   </div>
@@ -191,82 +221,86 @@
         </div>
 
         <!-- Right Column -->
-        <div class="ai-col" style="display: flex; flex-direction: column;">
-          <div class="ai-right-stats">
+        <div class="ai-col stagger-4 d-flex-col">
+          <div class="ai-right-stats glass-widget interactive-card">
             <div class="ai-right-stat">
               <div class="ai-right-stat-icon">M</div>
-              <span class="ai-right-stat-val">14</span>
+              <span class="ai-right-stat-val glow-text">14</span>
               <span class="ai-right-stat-lbl">Models</span>
             </div>
             <div class="ai-right-stat">
               <div class="ai-right-stat-icon">D</div>
-              <span class="ai-right-stat-val">85</span>
+              <span class="ai-right-stat-val glow-text">85</span>
               <span class="ai-right-stat-lbl">Datasets</span>
             </div>
             <div class="ai-right-stat">
               <div class="ai-right-stat-icon">E</div>
-              <span class="ai-right-stat-val">315</span>
+              <span class="ai-right-stat-val glow-text">315</span>
               <span class="ai-right-stat-lbl">Endpoints</span>
             </div>
           </div>
 
-          <div class="ai-progress-widget">
+          <div class="ai-progress-widget glass-widget interactive-card">
             <div class="ai-progress-header">
               <h3>System Health</h3>
-              <span>94%</span>
+              <span class="glow-text">94%</span>
             </div>
             <div class="ai-progress-bars">
-              <div class="ai-prog-bar c1"><span>94%</span>GPU</div>
-              <div class="ai-prog-bar c2" style="flex: 0.8;"><span>25%</span>Mem</div>
-              <div class="ai-prog-bar c3" style="flex: 0.7;"><span>10%</span>Disk</div>
+              <div class="ai-prog-bar c1 hover-pop"><span>94%</span>GPU</div>
+              <div class="ai-prog-bar c2 hover-pop" style="flex: 0.8;"><span>25%</span>Mem</div>
+              <div class="ai-prog-bar c3 hover-pop" style="flex: 0.7;"><span>10%</span>Disk</div>
             </div>
           </div>
 
-          <div class="ai-tasks-widget">
+          <div class="ai-tasks-widget glass-widget interactive-card flex-grow">
+            <div class="accent-glow-top"></div>
             <div class="ai-tasks-header">
-              <h3>Active Deployments</h3>
-              <span>3/8</span>
+              <div>
+                <h3>Active Deployments</h3>
+                <p class="text-secondary" style="margin: 5px 0 0; font-size: 12px;">Monitoring operations</p>
+              </div>
+              <span class="glow-text">3/8</span>
             </div>
             <div class="ai-task-list">
-              <div class="ai-task-item">
-                <div class="ai-task-icon">🗄️</div>
+              <div class="ai-task-item hover-slide">
+                <div class="ai-task-icon glow-icon blue">🗄️</div>
                 <div class="ai-task-info">
                   <h4>Vector DB Sync</h4>
                   <p>Sep 13, 08:30</p>
                 </div>
-                <div class="ai-task-check">✓</div>
+                <div class="ai-task-check active">✓</div>
               </div>
-              <div class="ai-task-item">
-                <div class="ai-task-icon">🧠</div>
+              <div class="ai-task-item hover-slide" style="animation-delay: 0.1s;">
+                <div class="ai-task-icon glow-icon purple">🧠</div>
                 <div class="ai-task-info">
                   <h4>Inference Node Scale</h4>
                   <p>Sep 13, 10:30</p>
                 </div>
-                <div class="ai-task-check">✓</div>
+                <div class="ai-task-check active">✓</div>
               </div>
-              <div class="ai-task-item">
-                <div class="ai-task-icon">🔒</div>
+              <div class="ai-task-item hover-slide" style="animation-delay: 0.2s;">
+                <div class="ai-task-icon glow-icon orange">🔒</div>
                 <div class="ai-task-info">
                   <h4>API Key Rotation</h4>
                   <p>Sep 13, 13:00</p>
                 </div>
-                <div class="ai-task-check">✓</div>
+                <div class="ai-task-check active">✓</div>
               </div>
-              <div class="ai-task-item" style="opacity: 0.7;">
-                <div class="ai-task-icon">📊</div>
+              <div class="ai-task-item hover-slide dim" style="animation-delay: 0.3s;">
+                <div class="ai-task-icon glow-icon">📊</div>
                 <div class="ai-task-info">
                   <h4>Bias Report Audit</h4>
                   <p>Sep 14, 09:45</p>
                 </div>
-                <div class="ai-task-check" style="background: rgba(255,255,255,0.2);"></div>
+                <div class="ai-task-check empty"></div>
               </div>
-              <div class="ai-task-item" style="opacity: 0.7;">
-                <div class="ai-task-icon">🌐</div>
+              <div class="ai-task-item hover-slide dim" style="animation-delay: 0.4s;">
+                <div class="ai-task-icon glow-icon">🌐</div>
                 <div class="ai-task-info">
                   <h4>SSL Cert Renewal</h4>
                   <p>Sep 15, 14:00</p>
                 </div>
-                <div class="ai-task-check" style="background: rgba(255,255,255,0.2);"></div>
+                <div class="ai-task-check empty"></div>
               </div>
             </div>
           </div>

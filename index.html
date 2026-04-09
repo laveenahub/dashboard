@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AuraML | AI Engineering Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ai-dash-page">
+    <div class="ai-dash-container">
+      <!-- Navbar -->
+      <nav class="ai-dash-nav">
+        <div class="ai-dash-logo">AuraML</div>
+        <div class="ai-dash-links">
+          <a href="#" class="ai-dash-link active">Dashboard</a>
+          <a href="#" class="ai-dash-link">Datasets</a>
+          <a href="#" class="ai-dash-link">Models</a>
+          <a href="#" class="ai-dash-link">Endpoints</a>
+          <a href="#" class="ai-dash-link">Billing</a>
+          <a href="#" class="ai-dash-link">Calendar</a>
+          <a href="#" class="ai-dash-link">Settings</a>
+        </div>
+        <div class="ai-dash-actions">
+          <button class="ai-dash-icon-btn">⚙️</button>
+          <button class="ai-dash-icon-btn">🔔</button>
+          <div class="ai-dash-avatar">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" alt="Sarah Connor">
+          </div>
+        </div>
+      </nav>
+
+      <!-- Header -->
+      <header class="ai-dash-header">
+        <h1>Welcome back, Sarah</h1>
+      </header>
+
+      <!-- Main Grid -->
+      <div class="ai-dash-grid">
+        <!-- Left Column -->
+        <div class="ai-col">
+          <div class="ai-profile-card">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&q=80" alt="Profile" class="ai-profile-img">
+            <div class="ai-profile-info">
+              <div class="ai-profile-text">
+                <h3>Sarah Connor</h3>
+                <p>Lead AI Engineer</p>
+              </div>
+              <div class="ai-profile-badge">$2,500 Budget</div>
+            </div>
+          </div>
+
+          <div class="ai-info-list">
+            <div class="ai-info-item"><span>API Keys</span><span>▼</span></div>
+            <div class="ai-info-item"><span>Active Clusters</span><span>▲</span></div>
+            <div style="padding: 0 10px 20px; border-bottom: 1px solid #F0F0F0;">
+              <div class="ai-info-device">
+                <img src="https://images.unsplash.com/photo-1593642702821-c823b13eb412?auto=format&fit=crop&w=100&q=80" alt="Cluster">
+                <div>
+                  <span>NVIDIA DGX A100</span>
+                  <span class="desc">Region: us-east-1</span>
+                </div>
+                <span style="margin-left: auto; color: #888;">⋮</span>
+              </div>
+            </div>
+            <div class="ai-info-item"><span>Usage Summary</span><span>▼</span></div>
+            <div class="ai-info-item"><span>Security Policies</span><span>▼</span></div>
+          </div>
+        </div>
+
+        <!-- Middle Column -->
+        <div class="ai-col">
+          <div class="ai-top-stats">
+            <div class="ai-pill">
+              <div class="ai-pill-content">
+                <span class="ai-pill-label">Data Cleaned</span>
+                <div class="ai-pill-bar-bg">85%</div>
+              </div>
+            </div>
+            <div class="ai-pill">
+              <div class="ai-pill-content">
+                <span class="ai-pill-label">Epochs</span>
+                <div class="ai-pill-bar-bg light">60%</div>
+              </div>
+            </div>
+            <div class="ai-pill">
+              <div class="ai-pill-content">
+                <span class="ai-pill-label">Train Limit</span>
+                <div class="ai-pill-bar-bg lighter">45%</div>
+              </div>
+            </div>
+            <div class="ai-pill outlined">
+              <div class="ai-pill-content">
+                <span class="ai-pill-label">Validation</span>
+                <div class="ai-pill-bar-bg">95%</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ai-widgets-row">
+            <div class="ai-widget">
+              <div class="ai-widget-header">
+                <h3 class="ai-widget-title">Compute Progress</h3>
+                <button class="ai-widget-btn">↗</button>
+              </div>
+              <div class="ai-widget-val">
+                128.4 <span class="ai-widget-unit">GPU h<span>this week</span></span>
+              </div>
+              <div class="ai-bar-chart">
+                <div class="ai-bar-col"><div class="ai-bar"><div class="ai-bar-fill" style="height: 30%;"></div></div><span class="ai-bar-day">S</span></div>
+                <div class="ai-bar-col"><div class="ai-bar"><div class="ai-bar-fill" style="height: 80%;"></div></div><span class="ai-bar-day">M</span></div>
+                <div class="ai-bar-col">
+                  <div class="ai-bar">
+                    <div class="ai-bar-fill active" style="height: 100%;"></div>
+                    <div style="background: #3366CC; color: white; padding: 2px 6px; border-radius: 10px; font-size: 10px; position: absolute; top: -25px;">42.1h</div>
+                  </div>
+                  <span class="ai-bar-day">T</span>
+                </div>
+                <div class="ai-bar-col"><div class="ai-bar"><div class="ai-bar-fill" style="height: 60%;"></div></div><span class="ai-bar-day">W</span></div>
+                <div class="ai-bar-col"><div class="ai-bar"><div class="ai-bar-fill" style="height: 20%;"></div></div><span class="ai-bar-day">T</span></div>
+                <div class="ai-bar-col"><div class="ai-bar"><div class="ai-bar-fill" style="height: 80%;"></div></div><span class="ai-bar-day">F</span></div>
+                <div class="ai-bar-col"><div class="ai-bar"><div class="ai-bar-fill" style="height: 10%;"></div></div><span class="ai-bar-day">S</span></div>
+              </div>
+            </div>
+
+            <div class="ai-widget">
+              <div class="ai-widget-header">
+                <h3 class="ai-widget-title">Training ETA</h3>
+                <button class="ai-widget-btn">↗</button>
+              </div>
+              <div class="ai-circle-chart">
+                <div class="ai-circle">
+                  <div class="ai-circle-inner">
+                    <div class="ai-circle-val">12:45</div>
+                    <div class="ai-circle-lbl">Remaining</div>
+                  </div>
+                </div>
+                <div class="ai-circle-actions">
+                  <div class="ai-btn-small">▶</div>
+                  <div class="ai-btn-small">⏸</div>
+                  <div class="ai-btn-small" style="background: #111; color: white;">⏱</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ai-calendar-view">
+            <div class="ai-cal-header">
+              <span class="ai-cal-month">August</span>
+              <span class="ai-cal-month active">September 2024</span>
+              <span class="ai-cal-month">October</span>
+            </div>
+            <div class="ai-cal-grid">
+              <div class="ai-cal-days">
+                <div class="ai-cal-day"><div class="ai-cal-day-name">Mon</div><div class="ai-cal-day-num">22</div></div>
+                <div class="ai-cal-day"><div class="ai-cal-day-name">Tue</div><div class="ai-cal-day-num">23</div></div>
+                <div class="ai-cal-day"><div class="ai-cal-day-name">Wed</div><div class="ai-cal-day-num active">24</div></div>
+                <div class="ai-cal-day"><div class="ai-cal-day-name">Thu</div><div class="ai-cal-day-num">25</div></div>
+                <div class="ai-cal-day"><div class="ai-cal-day-name">Fri</div><div class="ai-cal-day-num">26</div></div>
+                <div class="ai-cal-day"><div class="ai-cal-day-name">Sat</div><div class="ai-cal-day-num">27</div></div>
+              </div>
+              <div class="ai-cal-times" style="grid-column: 1;">
+                <span>8:00 am</span>
+                <span>9:00 am</span>
+                <span>10:00 am</span>
+                <span>11:00 am</span>
+              </div>
+              <div class="ai-cal-events">
+                <div class="ai-event ai-event-1">
+                  <h4>Data Sync</h4>
+                  <p>S3 bucket transfer</p>
+                  <div class="ai-event-1-avatars">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=50&q=80" alt="1">
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=50&q=80" alt="2">
+                  </div>
+                </div>
+                <div class="ai-event ai-event-2">
+                  <h4>Model Finetuning</h4>
+                  <p>Llama 3 8B Instruct</p>
+                  <div class="ai-event-2-avatars">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=50&q=80" alt="3">
+                    <img src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?auto=format&fit=crop&w=50&q=80" alt="4">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="ai-col" style="display: flex; flex-direction: column;">
+          <div class="ai-right-stats">
+            <div class="ai-right-stat">
+              <div class="ai-right-stat-icon">M</div>
+              <span class="ai-right-stat-val">14</span>
+              <span class="ai-right-stat-lbl">Models</span>
+            </div>
+            <div class="ai-right-stat">
+              <div class="ai-right-stat-icon">D</div>
+              <span class="ai-right-stat-val">85</span>
+              <span class="ai-right-stat-lbl">Datasets</span>
+            </div>
+            <div class="ai-right-stat">
+              <div class="ai-right-stat-icon">E</div>
+              <span class="ai-right-stat-val">315</span>
+              <span class="ai-right-stat-lbl">Endpoints</span>
+            </div>
+          </div>
+
+          <div class="ai-progress-widget">
+            <div class="ai-progress-header">
+              <h3>System Health</h3>
+              <span>94%</span>
+            </div>
+            <div class="ai-progress-bars">
+              <div class="ai-prog-bar c1"><span>94%</span>GPU</div>
+              <div class="ai-prog-bar c2" style="flex: 0.8;"><span>25%</span>Mem</div>
+              <div class="ai-prog-bar c3" style="flex: 0.7;"><span>10%</span>Disk</div>
+            </div>
+          </div>
+
+          <div class="ai-tasks-widget">
+            <div class="ai-tasks-header">
+              <h3>Active Deployments</h3>
+              <span>3/8</span>
+            </div>
+            <div class="ai-task-list">
+              <div class="ai-task-item">
+                <div class="ai-task-icon">🗄️</div>
+                <div class="ai-task-info">
+                  <h4>Vector DB Sync</h4>
+                  <p>Sep 13, 08:30</p>
+                </div>
+                <div class="ai-task-check">✓</div>
+              </div>
+              <div class="ai-task-item">
+                <div class="ai-task-icon">🧠</div>
+                <div class="ai-task-info">
+                  <h4>Inference Node Scale</h4>
+                  <p>Sep 13, 10:30</p>
+                </div>
+                <div class="ai-task-check">✓</div>
+              </div>
+              <div class="ai-task-item">
+                <div class="ai-task-icon">🔒</div>
+                <div class="ai-task-info">
+                  <h4>API Key Rotation</h4>
+                  <p>Sep 13, 13:00</p>
+                </div>
+                <div class="ai-task-check">✓</div>
+              </div>
+              <div class="ai-task-item" style="opacity: 0.7;">
+                <div class="ai-task-icon">📊</div>
+                <div class="ai-task-info">
+                  <h4>Bias Report Audit</h4>
+                  <p>Sep 14, 09:45</p>
+                </div>
+                <div class="ai-task-check" style="background: rgba(255,255,255,0.2);"></div>
+              </div>
+              <div class="ai-task-item" style="opacity: 0.7;">
+                <div class="ai-task-icon">🌐</div>
+                <div class="ai-task-info">
+                  <h4>SSL Cert Renewal</h4>
+                  <p>Sep 15, 14:00</p>
+                </div>
+                <div class="ai-task-check" style="background: rgba(255,255,255,0.2);"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
